@@ -1,0 +1,76 @@
+% ============================================================
+%  Shared preamble — \input this from every notes document.
+%  Do NOT put \documentclass, fonts, geometry, titlesec,
+%  or fancyhdr here; those stay per-document.
+% ============================================================
+
+% ---- Encoding & typography ----------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+
+% ---- Mathematics --------------------------------------------
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+
+% ---- Lists --------------------------------------------------
+\usepackage{enumitem}
+
+% ---- Colour & links -----------------------------------------
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black!60, citecolor=black!60, urlcolor=black!60}
+
+% ---- Diagrams -----------------------------------------------
+\usepackage{tikz-cd}
+
+% ---- Theorem environments -----------------------------------
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+\newtheorem{remark}[example]{Remark}
+\newtheorem{definition}[example]{Definition}
+
+\theoremstyle{plain}
+\newtheorem{theorem}[example]{Theorem}
+\newtheorem{proposition}[example]{Proposition}
+\newtheorem{lemma}[example]{Lemma}
+\newtheorem{corollary}[example]{Corollary}
+\newtheorem{claim}[example]{Claim}
+
+% ---- Operators ----------------------------------------------
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\height}{ht}
+\DeclareMathOperator{\V}{\textbf{V}}
+
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\EExt}{\mathcal{E}xt}
+\newcommand{\Def}{\mathrm{Def}}
+\newcommand{\Supp}{\mathrm{Supp}}
+
+% ---- Blackboard bold ----------------------------------------
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+% ---- Calligraphic / fraktur ---------------------------------
+\newcommand{\cO}{\mathcal{O}}   % structure sheaf
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\fX}{\mathfrak{X}}
+
+% ---- Misc ---------------------------------------------------
+\newcommand{\kk}{k}

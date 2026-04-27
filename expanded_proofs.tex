@@ -1,0 +1,112 @@
+% ============================================================
+%  Expanded Proofs
+%  TU Berlin, Summer Semester 2025
+% ============================================================
+
+\documentclass[a4paper, 12pt]{article}
+
+% ---- Font & layout (document-specific) ----------------------
+\usepackage{mathpazo}
+\linespread{1.05}
+\usepackage{microtype}
+\usepackage{geometry}
+\geometry{margin=2.5cm, top=3cm, bottom=3cm}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{1.5em}
+
+% ---- Section headings ---------------------------------------
+\usepackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries}{\thesection.}{0.6em}{}
+  [\vspace{0.3ex}\rule{\linewidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{2.5ex}{1.2ex}
+
+% ---- Running headers ----------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\itshape Expanded Proofs}
+\rhead{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \rhead{\small\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% ---- Shared preamble ----------------------------------------
+\input{preamble}
+
+% ---- Title --------------------------------------------------
+\title{\textbf{Expanded Proofs}}
+\author{Dominic Bunnett}
+\date{Last updated: \today}
+
+% =============================================================
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% =============================================================
+\section*{Introduction}
+Expanded and detailed proofs of results from the Schemes Reading Course,
+following Mumford's \emph{The Red Book of Varieties and Schemes}.
+
+% =============================================================
+\section{Chapter 2, Section 2}
+
+\begin{theorem}[Adjunction isomorphism]
+  Let $X$ be a scheme and $A$ a commutative ring. There is a natural isomorphism
+  \[
+    \Hom_{\mathrm{Sch}}(X,\, \Spec A)
+    \;\cong\;
+    \Hom_{\mathrm{Ring}}(A,\, \Gamma(X, \cO_X)).
+  \]
+\end{theorem}
+
+\begin{proof}
+  \begin{enumerate}
+    \item \textbf{A ring map determines points.}
+      Given a ring homomorphism $\phi \colon A \to \Gamma(X, \cO_X)$, we
+      obtain a set map on underlying points: a prime $\mathfrak{p} \in X$
+      determines a prime $\phi^{-1}(\mathfrak{p}) \in \Spec A$ via the
+      composite $A \xrightarrow{\phi} \Gamma(X,\cO_X) \to \cO_{X,\mathfrak{p}}
+      \to \kappa(\mathfrak{p})$, whose kernel is $\phi^{-1}(\mathfrak{p})$.
+
+    \item \textbf{Reduce to affine opens.}
+      Since $\Spec A$ is affine, a morphism of schemes $f \colon X \to \Spec A$
+      is completely determined by its restrictions to an affine open cover
+      $\{U_i\}$ of $X$ (together with the compatibility conditions on overlaps).
+      It therefore suffices to construct the bijection on each affine open
+      $U = \Spec B \subseteq X$, using the restricted ring map
+      $A \xrightarrow{\phi} \Gamma(X,\cO_X) \xrightarrow{\mathrm{res}} B$.
+
+    \item \textbf{Affine case.}
+      For $X = \Spec B$ the required bijection is
+      \[
+        \Hom_{\mathrm{Sch}}(\Spec B,\, \Spec A)
+        \;\cong\;
+        \Hom_{\mathrm{Ring}}(A,\, B),
+      \]
+      which is the standard correspondence between ring maps $A \to B$ and
+      scheme maps $\Spec B \to \Spec A$ \cite{Mumford}. Applying this to each
+      affine open and observing that the resulting local morphisms glue
+      (the compatibility on overlaps follows from naturality of the
+      restriction maps in $\cO_X$) yields the global bijection. \qedhere
+  \end{enumerate}
+\end{proof}
+
+% =============================================================
+\bibliographystyle{alpha}
+\begin{thebibliography}{9}
+
+\bibitem{Mumford}
+  D.~Mumford,
+  \emph{The Red Book of Varieties and Schemes},
+  Lecture Notes in Mathematics 1358,
+  Springer, 2nd ed., 1999.
+
+\end{thebibliography}
+
+\end{document}
