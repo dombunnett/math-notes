@@ -57,7 +57,7 @@ in classical algebraic geometry over an algebraically closed field.
 \begin{example}[A morphism of schemes, not of varieties]
 Let $k$ be a field with algebraic closure $\bar{k}$, and let
 $\sigma \in \Gal(\bar{k}/k)$ be non-trivial. Consider $X = \Spec(\bar{k})$.
-\begin{properties}
+\begin{enumerate}
 \item \emph{Topologically trivial.} $\Spec(\bar{k})$ is a single point, so any
   self-map is the identity on the underlying topological space.
 \item \emph{Non-trivial as a scheme morphism.} $\sigma$ induces a ring automorphism
@@ -69,7 +69,7 @@ $\sigma \in \Gal(\bar{k}/k)$ be non-trivial. Consider $X = \Spec(\bar{k})$.
   structure sheaf via $a + bi \mapsto a - bi$.
 \item \emph{Moral.} A morphism of schemes is a pair (continuous map, morphism of
   sheaves). Classical geometry sees only the first component.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
@@ -79,7 +79,7 @@ The coordinate ring of the union of the coordinate axes in $\AA^2$.
 This is still a variety — just a reducible one, the union of two lines.
 Nothing genuinely new happens here from the scheme-theoretic point of view;
 it is included as a baseline before the more exotic examples.
-\begin{properties}
+\begin{enumerate}
 \item \emph{Reduced, not a domain.} $\bar x \cdot \bar y = 0$ with
   $\bar x, \bar y \neq 0$, but no nilpotents.
 \item \emph{Minimal primes.} $(\bar x)$ and $(\bar y)$, one for each irreducible
@@ -89,14 +89,14 @@ it is included as a baseline before the more exotic examples.
   $\mathfrak{m} = (\bar x, \bar y)$ is not a DVR:
   $\mathfrak{m}/\mathfrak{m}^2$ has dimension $2$ over $k$
   while $\dim_{\mathfrak{m}} R = 1$.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
 
 \begin{example}[{$R = k[x]_{(x)}$, localization at a point}]
 The localization of $k[x]$ at the prime ideal $(x)$.
-\begin{properties}
+\begin{enumerate}
 \item \emph{Local.} The unique maximal ideal is $(x)R$, with residue field $k$.
 \item \emph{Noetherian.} Localization of a Noetherian ring.
 \item \emph{Dimension $1$.} The chain $(0) \subset (x)R$ is maximal.
@@ -104,67 +104,67 @@ The localization of $k[x]$ at the prime ideal $(x)$.
 \item \emph{$\Spec R$.} Two points: the closed point $(x)$ and the generic
   point $(0)$. Geometrically this is the germ of $\AA^1_k$ at the origin —
   a scheme with no analogue in classical geometry, which sees only closed points.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
 
 \begin{example}[{$R = k[x]_{(x)} \cap k[x]_{(x-1)} \subseteq k(x)$, semilocalization at two points}]
 The ring of rational functions regular at both $0$ and $1$.
-\begin{properties}
+\begin{enumerate}
 \item \emph{Not local.} Two maximal ideals, corresponding to $x = 0$ and $x = 1$.
 \item \emph{Noetherian.} A localization of $k[x]$.
 \item \emph{Dimension $1$.}
 \item \emph{$\Spec R$.} Three points: the generic point $(0)$ and two closed
   points. This is the open subscheme of $\AA^1_k$ obtained by discarding all
   closed points except $\{0, 1\}$ — a purely scheme-theoretic construction.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
 
 \begin{example}[$R = k(x)$, the generic point]
 The rational function field in one variable.
-\begin{properties}
+\begin{enumerate}
 \item \emph{$\Spec R$ is a point.} $k(x)$ is a field, so $(0)$ is its only prime.
 \item \emph{Local and regular.} Fields are regular local rings of dimension $0$.
 \item \emph{The morphism $\Spec k(x) \to \Spec k[x]$.} Maps the unique point to
   the generic point $(0) \in \Spec k[x]$. The image is the non-closed point,
   invisible in classical geometry over $k$.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
 
 \begin{example}[{$R = k[x_1, x_2, x_3, \ldots]$, infinite affine space}]
 The polynomial ring in countably many variables.
-\begin{properties}
+\begin{enumerate}
 \item \emph{Not Noetherian.} The chain $(x_1) \subset (x_1, x_2) \subset \cdots$
   does not stabilize.
 \item \emph{Infinite Krull dimension.} The chain
   $(0) \subset (x_1) \subset (x_1,x_2) \subset \cdots$
   is a strictly increasing chain of primes, so $\dim R = \infty$.
 \item \emph{Reduced domain.} $R$ is an integral domain with no nilpotents.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
 
 \begin{example}[{$R = k[[x]]$, formal power series}]
-\begin{properties}
+\begin{enumerate}
 \item \emph{Local.} Unique maximal ideal $(x)$, residue field $k$.
 \item \emph{Noetherian.} Every ideal is of the form $(x^n)$.
 \item \emph{Dimension $1$ and regular.} $R$ is a DVR, like $k[x]_{(x)}$.
 \item \emph{$\Spec k[[x]]$ vs $\Spec k[x]_{(x)}$.} Both have the same underlying
   topological space (two points), but the local rings differ — one is algebraic,
   the other formal. This shows that two schemes can be homeomorphic but not isomorphic.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
 
 \begin{example}[{$R = k[[x,\varepsilon]]/(\varepsilon^2)$, first-order thickening}]
-\begin{properties}
+\begin{enumerate}
 \item \emph{Local.} Maximal ideal $(\bar x, \bar\varepsilon)$.
 \item \emph{Not reduced.} Nilradical $(\bar\varepsilon)$, since $\varepsilon^2 = 0$.
 \item \emph{Dimension $1$.} Nilpotents do not contribute to chains of primes.
@@ -172,13 +172,13 @@ The polynomial ring in countably many variables.
   of $\Spec k[[x]]$: the extra data of $\varepsilon$ records a tangent direction.
   A map $\Spec R \to X$ is an arc on $X$ together with a first-order deformation —
   the basic object of deformation theory.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
 
 \begin{example}[{$R = \ZZ[x]$, the arithmetic line}]
-\begin{properties}
+\begin{enumerate}
 \item \emph{Noetherian, dimension $2$.} The chain
   $(0) \subset (p) \subset (p, x-a)$ is maximal, giving $\dim \ZZ[x] = 2$.
 \item \emph{Fibres of $\Spec \ZZ[x] \to \Spec \ZZ$.} Over $(p)$:
@@ -188,7 +188,7 @@ The polynomial ring in countably many variables.
 \item \emph{Jacobson.} Every prime is an intersection of maximal ideals.
   Compare $k[x]_{(x)}$, which is not Jacobson: localization kills closed points
   and destroys the Jacobson property.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
@@ -196,7 +196,7 @@ The polynomial ring in countably many variables.
 \begin{example}[$A^+$, absolute integral closure]
 Let $A$ be a domain with fraction field $K$; define $A^+$ as the integral closure
 of $A$ in an algebraic closure $\overline K$.
-\begin{properties}
+\begin{enumerate}
 \item \emph{Domain.} Integral closure of a domain is a domain.
 \item \emph{Not Noetherian.} For $A = \ZZ$, $A^+ = \overline{\ZZ}$ (ring of all
   algebraic integers) has infinite Krull dimension.
@@ -204,7 +204,7 @@ of $A$ in an algebraic closure $\overline K$.
   in general.
 \item \emph{Relevance.} Appears naturally in perfectoid geometry and $p$-adic
   Hodge theory, where $\ZZ^+_p$ plays a central role.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
@@ -212,7 +212,7 @@ of $A$ in an algebraic closure $\overline K$.
 \begin{example}[{$R = k[x^{1/p^\infty}]$, perfection in characteristic $p$}]
 Let $k$ have characteristic $p > 0$; set
 $R = k[x, x^{1/p}, x^{1/p^2}, \ldots]$.
-\begin{properties}
+\begin{enumerate}
 \item \emph{Domain, not Noetherian.} The chain
   $(x) \subset (x^{1/p}) \subset (x^{1/p^2}) \subset \cdots$
   does not stabilize.
@@ -221,7 +221,7 @@ $R = k[x, x^{1/p}, x^{1/p^2}, \ldots]$.
   This is what it means for $R$ to be \emph{perfect}.
 \item \emph{Dimension $1$.} Same prime structure as $k[x]$ but with a
   richer ring of global functions.
-\end{properties}
+\end{enumerate}
 \end{example}
 
 % =============================================================
